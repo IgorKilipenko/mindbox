@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{180D3555-976D-415B-97C7-0008A5A1FB5A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "tests\Tests.csproj", "{180D3555-976D-415B-97C7-0008A5A1FB5A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeomertyLibrary", "GeomertyLibrary\GeomertyLibrary.csproj", "{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}"
 EndProject

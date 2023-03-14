@@ -1,13 +1,11 @@
-﻿namespace GeomertyLibrary {
-    public interface IShape {
-        public double GetArea();
-    }
+﻿namespace GeomertyLibrary;
 
-    public class Circle : IShape {
-        public double Radius { get; set; }
+public interface IShape {
+    public double CalculateArea();
+}
 
-        public double GetArea() {
-            return Math.Pow(Radius, 2) * Math.PI;
-        }
-    }
+public abstract class Shape : IShape {
+    public abstract double CalculateArea();
+
+    public static double Tolerance { get; } = Math.Pow(10d,-6);
 }
