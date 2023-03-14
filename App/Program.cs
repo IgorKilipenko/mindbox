@@ -1,7 +1,9 @@
-﻿namespace Mindbox {
+﻿using GeomertyLibrary;
+
+namespace Mindbox {
     class Program {
         static void Main(string[] args) {
-            Circle circle = new Circle() { Radius = 10d };
+            GeomertyLibrary.Circle circle = new GeomertyLibrary.Circle() { Radius = 10d };
             Console.WriteLine($"area = {circle.GetArea()}");
 
             string str = args.Aggregate("", (res, val) => res + $"{val.Trim(' ')} ").TrimEnd(' ');

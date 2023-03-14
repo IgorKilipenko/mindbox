@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{180D3555-976D-415B-97C7-0008A5A1FB5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeomertyLibrary", "GeomertyLibrary\GeomertyLibrary.csproj", "{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "App", "App\App.csproj", "{81AC4E12-12FB-410D-A1BC-AAFC30F4CC51}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{180D3555-976D-415B-97C7-0008A5A1FB5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180D3555-976D-415B-97C7-0008A5A1FB5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180D3555-976D-415B-97C7-0008A5A1FB5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180D3555-976D-415B-97C7-0008A5A1FB5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF5FFD2A-3470-4BA2-A0EF-BC38C812F68F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81AC4E12-12FB-410D-A1BC-AAFC30F4CC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81AC4E12-12FB-410D-A1BC-AAFC30F4CC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81AC4E12-12FB-410D-A1BC-AAFC30F4CC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81AC4E12-12FB-410D-A1BC-AAFC30F4CC51}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

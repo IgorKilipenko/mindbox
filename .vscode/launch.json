@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": ".NET Core Launch (console)",
+            "name": "Launch App",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/net7.0/for-resume.dll",
+            "program": "${workspaceFolder}/App/bin/Debug/net7.0/App.dll",
             "args": ["-c", "-s", "circle"],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/App",
             "console": "externalTerminal",
             "stopAtEntry": false
         },
