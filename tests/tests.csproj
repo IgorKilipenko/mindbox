@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GeomertyLibrary\GeomertyLibrary.csproj" />
+    <ProjectReference Include="..\src\GeomertyLibrary\GeomertyLibrary.csproj" />
   </ItemGroup>
 
 </Project>
