@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Tests;
 
 [TestClass]
-public class GeomertyLibraryUnitTest {
+public class ShapesUnitTest {
     [TestMethod]
     public void TestCircleArea() {
         Geo.Circle circle = new Geo.Circle(2d);
@@ -44,7 +44,23 @@ public class GeomertyLibraryUnitTest {
 
     [TestMethod]
     public void TestTriangleRightAngle() {
-        Geo.Triangle triangle = new Geo.Triangle(2d, 2.828427d, 2d);
-        Assert.IsTrue(triangle.IsRightAngle);
+        var test = (double angle, double width) => {
+            double hypotenuse = 1d / Math.Cos(angle) * width;
+            double heigth = Math.Tan(angle) * width;
+
+            Geo.Triangle triangle = new Geo.Triangle(hypotenuse, heigth, width);
+            Assert.IsTrue(triangle.IsRightAngle);
+        };
+
+        double angle = Math.PI / 2d;
+        double width = 10d;
+
+        while ((angle -= Math.PI / 180d) > Math.PI / 180d) {
+            try {
+                test(angle, width);
+            } catch {
+                Assert.Fail();
+            }
+        }
     }
 }
