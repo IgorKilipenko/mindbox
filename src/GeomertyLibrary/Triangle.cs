@@ -16,6 +16,10 @@ public class Triangle : Shape {
         }
     }
 
+    public bool IsValidSides {
+        get => _IsValidSides(_sides);
+    }
+
     public override double CalculateArea() {
         _CheckSides(_sides);
 
@@ -38,12 +42,18 @@ public class Triangle : Shape {
         }
     }
 
-    private void _CheckSides(double[] sides) {
+    private static bool _IsValidSides(double[] sides) {
+        Debug.Assert(sides.Length == 3);
+
         var orderedSides = sides.Order();
         var minSideLength = orderedSides.First();
         var maxideLength = orderedSides.Last();
 
-        if (Math.Abs(minSideLength) <= Shape.Tolerance || orderedSides.SkipLast(1).Sum() <= maxideLength) {
+        return !(Math.Abs(minSideLength) <= Shape.Tolerance || orderedSides.SkipLast(1).Sum() <= maxideLength);
+    }
+
+    private static void _CheckSides(double[] sides) {
+        if (!_IsValidSides(sides)) {
             throw new ArgumentException("The sum of two side lengths has to exceed the length of the third side");
         }
     }

@@ -1,22 +1,27 @@
 using Geo = GeomertyLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Tests;
 
 [TestClass]
-public class ShapesUnitTest {
+public class CircleUnitTest {
     [TestMethod]
-    public void TestCircleArea() {
-        Geo.Circle circle = new Geo.Circle(2d);
-        const double expected = Math.PI * 4d;
+    public void TestArea() {
+        Geo.Circle circle = new Geo.Circle(0d);
+        double expected = 0d;
         double area = circle.CalculateArea();
+        Assert.AreEqual(expected, area, Geo.Shape.Tolerance);
 
-        Assert.AreEqual(expected, area, Geo.Shape.Tolerance,
-            $"Expected for radius '{circle.Radius}': {expected}; Actual: {area}");
+        circle.Radius = 2d;
+        expected = Math.PI * Math.Pow(circle.Radius,2);
+        area = circle.CalculateArea();
+        Assert.AreEqual(expected, area, Geo.Shape.Tolerance);
     }
+}
 
+[TestClass]
+public class TriangleUnitTest {
     [TestMethod]
-    public void TestTriangleInvalidSide() {
+    public void TestInvalidSide() {
         string failedMsg = "Must throw ArgumentException";
 
         Assert.ThrowsException<ArgumentException>(() => new Geo.Triangle(2d, 0d, 4d), failedMsg);
@@ -34,7 +39,7 @@ public class ShapesUnitTest {
     }
 
     [TestMethod]
-    public void TestTriangleArea() {
+    public void TestArea() {
         Geo.Triangle triangle = new Geo.Triangle(2d, 3d, 4d);
         const double expected = 2.9047375d;
         double area = triangle.CalculateArea();
@@ -43,7 +48,7 @@ public class ShapesUnitTest {
     }
 
     [TestMethod]
-    public void TestTriangleRightAngle() {
+    public void TestRightAngle() {
         var test = (double angle, double width) => {
             double hypotenuse = 1d / Math.Cos(angle) * width;
             double heigth = Math.Tan(angle) * width;
