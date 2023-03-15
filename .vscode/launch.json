@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             "program": "${workspaceFolder}/app/bin/Debug/net7.0/app.dll",
-            "args": ["-c", "-s", "circle"],
+            "args": [],
             "cwd": "${workspaceFolder}",
             "console": "externalTerminal",
             "stopAtEntry": false
